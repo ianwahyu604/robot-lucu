@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Robot Lucu - Day 1</title>
+    <style>
+      body {
+        background: #f0f6ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Comic Sans MS", sans-serif;
+      }
+
+      .robot {
+        position: relative;
+        width: 180px;
+        text-align: center;
+      }
+
+      .head {
+        width: 120px;
+        height: 100px;
+        background: #7aa7ff;
+        border-radius: 20px;
+        margin: 0 auto;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .eye {
+        width: 24px;
+        height: 24px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 28px;
+      }
+      .eye.left {
+        left: 20px;
+      }
+      .eye.right {
+        right: 20px;
+      }
+
+      .pupil {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+      }
+
+      .body {
+        width: 140px;
+        height: 120px;
+        background: #a2c1ff;
+        border-radius: 10px;
+        margin: 12px auto 0;
+        position: relative;
+      }
+
+      .arm {
+        width: 20px;
+        height: 70px;
+        background: #7aa7ff;
+        position: absolute;
+        top: 20px;
+        border-radius: 8px;
+      }
+      .arm.left {
+        left: -20px;
+      }
+      .arm.right {
+        right: -20px;
+      }
+
+      .chest {
+        width: 70px;
+        height: 50px;
+        background: #fff;
+        border-radius: 8px;
+        margin: 30px auto;
+        line-height: 50px;
+        color: #7aa7ff;
+        font-weight: bold;
+      }
+
+      button {
+        margin-top: 20px;
+        background: #7aa7ff;
+        border: none;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      button:hover {
+        background: #5586ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Robot Lucu 👾</h2>
+
+    <div class="robot">
+      <div class="head">
+        <div class="eye left"><div class="pupil"></div></div>
+        <div class="eye right"><div class="pupil"></div></div>
+      </div>
+      <div class="body">
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+        <div class="chest">🤖</div>
+      </div>
+    </div>
+    <button id="wave">Lambaikan Tangan 👋</button>
+    <script>
+      const armRight = document.querySelector(".arm.right");
+      const wave = document.getElementById("wave");
+
+      wave.addEventListener("click", () => {
+        armRight.style.transformOrigin = "top center";
+        armRight.style.transform = "rotate(-40deg)";
+        setTimeout(() => (armRight.style.transform = "rotate(0deg)"), 500);
+      });
+    </script>
+  </body>
+</html>
