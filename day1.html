@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Robot Lucu - Day 1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #ffc0cb;
+        padding-top: 100px;
+      }
+      button {
+        background: #7aa7ff;
+        border: none;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #5586ff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Halo, aku Robot Lucu 🤖</h1>
+    <p>Klik tombol di bawah!</p>
+
+    <button id="sayHi">Halo Robot 🤖</button>
+    <button id="jump">Lompat! 🦘</button>
+
+    <p id="speech"></p>
+
+    <script>
+      const sayHi = document.getElementById("sayHi");
+      sayHi.addEventListener("click", () => {
+        alert("Halo! Aku robot HTML pertamamu 🤖✨");
+      });
+
+      const jump = document.getElementById("jump");
+      jump.addEventListener("click", () => {
+        alert("Boing! 🦘");
+      });
+
+      const speech = document.getElementById("speech");
+      sayHi.addEventListener("click", () => {
+        speech.textContent = "Halo juga! Senang bertemu kamu 😄";
+      });
+    </script>
+  </body>
+</html>
