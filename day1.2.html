@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <title>Robot Lucu - Day 1</title>
     <style>
+      h2 {
+        margin: 100px;
+      }
+
       body {
         background: #f0f6ff;
         display: flex;
@@ -21,10 +25,26 @@
         text-align: center;
       }
 
+      .ant {
+        width: 20px;
+        height: 70px;
+        background: black;
+        position: absolute;
+        top: -50px;
+        border-radius: 8px;
+      }
+
+      .ant.left {
+        left: 60px;
+      }
+      .ant.right {
+        right: 60px;
+      }
+
       .head {
         width: 120px;
         height: 100px;
-        background: #7aa7ff;
+        background: #0ad8f3;
         border-radius: 20px;
         margin: 0 auto;
         position: relative;
@@ -32,8 +52,8 @@
       }
 
       .eye {
-        width: 24px;
-        height: 24px;
+        width: 15px;
+        height: 25px;
         background: #fff;
         border-radius: 50%;
         position: absolute;
@@ -47,19 +67,19 @@
       }
 
       .pupil {
-        width: 10px;
-        height: 10px;
+        width: 5px;
+        height: 15px;
         background: #000;
         border-radius: 50%;
         position: absolute;
         top: 7px;
-        left: 7px;
+        left: 5px;
       }
 
       .body {
         width: 140px;
         height: 120px;
-        background: #a2c1ff;
+        background: #adf30a;
         border-radius: 10px;
         margin: 12px auto 0;
         position: relative;
@@ -68,7 +88,7 @@
       .arm {
         width: 20px;
         height: 70px;
-        background: #7aa7ff;
+        background: #0ad8f3;
         position: absolute;
         top: 20px;
         border-radius: 8px;
@@ -109,8 +129,9 @@
   </head>
   <body>
     <h2>Robot Lucu 👾</h2>
-
     <div class="robot">
+      <div class="ant left"></div>
+      <div class="ant right"></div>
       <div class="head">
         <div class="eye left"><div class="pupil"></div></div>
         <div class="eye right"><div class="pupil"></div></div>
